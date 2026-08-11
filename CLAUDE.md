@@ -27,6 +27,11 @@ Content is served directly from the `main` branch by GitHub Pages.
 The Helm chart registry at `https://forrie007.github.io/helm-charts` is served from the
 `forrie007/helm-charts` repository (a separate GitHub Pages site), not this one.
 
+**That Pages-based chart registry is legacy.** The home lab cluster's `forrie` HelmRepository in
+`flux-repository` was migrated to OCI (`oci://ghcr.io/forrie007/charts`), and the chart repos publish
+there via the `publish-helm-to-ghcr-oci.yaml` reusable workflow. The Pages path
+(`publish-helm-to-helm-charts.yaml`) still exists in `forrie007/.github` but is not what Flux consumes.
+
 ---
 
 ## Renovate PR Review Checklist
